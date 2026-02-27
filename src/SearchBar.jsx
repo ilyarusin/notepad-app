@@ -58,7 +58,7 @@ const SearchIcon = styled.img`
 function SearchBar({ searchTerm, onSearch }) {
     return <SearchContainer>
         <Input type="text" value={searchTerm} onChange={(e) => onSearch(e.target.value)} placeholder="Поиск записей..." />
-        <a href="#"><SearchIcon src="/assets/search-icon.png" /></a>
+        <a href="#"><SearchIcon src="/public/search-icon.png" /></a>
     </SearchContainer>;
 }
 
