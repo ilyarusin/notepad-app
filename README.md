@@ -13,6 +13,8 @@
 | **💾 Автосохранение** | Все заметки сохраняются в localStorage |
 | **🎨 Стильный интерфейс** | Красивое оформление с тетрадной разлиновкой |
 
+**Демо:** 🔗 [https://ilyarusin.github.io/notepad-app/](https://ilyarusin.github.io/notepad-app/)
+
 ## 🛠️ Технологии
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
