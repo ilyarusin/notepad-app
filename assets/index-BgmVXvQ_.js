@@ -68,7 +68,7 @@ Error generating stack: `+a.message+`
 		left: 400px;
 		width: 400px;
 		box-sizing: border-box;
-`;function rv({handleBlur:i,text:r,handleChange:o}){return Vt.jsxs(Vt.Fragment,{children:[Vt.jsx(sv,{children:"Блокнот"}),Vt.jsx(cv,{id:"textarea",onBlur:s=>i(s),value:r,onChange:s=>o(s)})]})}const ov=Vl.input`
+`;function rv({handleBlur:i,text:r,handleChange:o}){return Vt.jsxs(Vt.Fragment,{children:[Vt.jsx(sv,{children:"Блокнот"}),Vt.jsx(cv,{id:"textarea",onBlur:s=>i(s),value:r,onChange:s=>o(s)})]})}const ov="/notepad-app/assets/search-icon-C2HwfNlm.png",dv=Vl.input`
     margin: 0 auto;
     width: 100%;
     height: 45px;
@@ -93,21 +93,21 @@ Error generating stack: `+a.message+`
         opacity: 0;
         }
     }
-`,dv=Vl.div`
+`,hv=Vl.div`
     width: 490px;
     display: block;
     margin-right: auto;
     margin-left: 339px;
     margin-top: -50px;
     margin-bottom: 50px;
-`,hv=Vl.img`
+`,yv=Vl.img`
     position: relative;
     float: right;
     width: 75px;
     height: 75px;
     top: -62px;
     right: -45px;
-`;function yv({searchTerm:i,onSearch:r}){return Vt.jsxs(dv,{children:[Vt.jsx(ov,{type:"text",value:i,onChange:o=>r(o.target.value),placeholder:"Поиск записей..."}),Vt.jsx("a",{href:"#",children:Vt.jsx(hv,{src:"/public/search-icon.png"})})]})}const mv="useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwyzrict";let vv=(i=21)=>{let r="",o=crypto.getRandomValues(new Uint8Array(i|=0));for(;i--;)r+=mv[o[i]&63];return r};function gv(){return vv()}const Sv=Vl.div`
+`;function mv({searchTerm:i,onSearch:r}){return Vt.jsxs(hv,{children:[Vt.jsx(dv,{type:"text",value:i,onChange:o=>r(o.target.value),placeholder:"Поиск записей..."}),Vt.jsx("a",{href:"#",children:Vt.jsx(yv,{src:ov,alt:"search"})})]})}const vv="useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwyzrict";let gv=(i=21)=>{let r="",o=crypto.getRandomValues(new Uint8Array(i|=0));for(;i--;)r+=vv[o[i]&63];return r};function Sv(){return gv()}const pv=Vl.div`
     width: 100%;
     position: relative;
-`,kd="notes_app";function pv(){const[i,r]=Xe.useState({edit:!1,id:void 0}),[o,s]=Xe.useState(()=>{const q=localStorage.getItem(kd);return JSON.parse(q)||[]}),[v,A]=Xe.useState(""),[U,B]=Xe.useState("");Xe.useEffect(()=>{localStorage.setItem(kd,JSON.stringify(o))},[o]);const D=o.filter(q=>q.text.toLowerCase().includes(U.toLowerCase()));function z(q){return q>=0&&q<=9?"0"+q:q}function G(q){if(i.edit)s(o.map(Z=>Z.id===i.id?{...Z,text:q.target.value}:Z)),A(""),r({edit:!1,id:void 0});else{let Z=new Date,dt=z(Z.getHours())+":"+z(Z.getMinutes())+":"+z(Z.getSeconds())+" "+z(Z.getDate())+"."+z(Z.getMonth()+1)+"."+Z.getFullYear(),nt=Object.assign([],o);nt.push({text:q.target.value,time:dt,id:gv()}),s(nt),A("")}}function N(q,Z){A(q.text),r({edit:!0,id:q.id})}function $(q){A(q.target.value)}const at=(q,Z)=>{Z.stopPropagation(),s(o.filter(dt=>dt.id!==q)),r({edit:!1,id:void 0})};return Vt.jsx(Vt.Fragment,{children:Vt.jsxs(Sv,{children:[Vt.jsx(yv,{searchTerm:U,onSearch:B}),Vt.jsx(fv,{filteredNotes:D,clickhandler:N,deleteItem:at,editingId:i.id}),Vt.jsx(rv,{handleBlur:G,text:v,handleChange:$})]})})}tm.createRoot(document.getElementById("root")).render(Vt.jsx(Xe.StrictMode,{children:Vt.jsx(pv,{})}));
+`,kd="notes_app";function bv(){const[i,r]=Xe.useState({edit:!1,id:void 0}),[o,s]=Xe.useState(()=>{const q=localStorage.getItem(kd);return JSON.parse(q)||[]}),[v,A]=Xe.useState(""),[U,B]=Xe.useState("");Xe.useEffect(()=>{localStorage.setItem(kd,JSON.stringify(o))},[o]);const D=o.filter(q=>q.text.toLowerCase().includes(U.toLowerCase()));function z(q){return q>=0&&q<=9?"0"+q:q}function G(q){if(i.edit)s(o.map(Z=>Z.id===i.id?{...Z,text:q.target.value}:Z)),A(""),r({edit:!1,id:void 0});else{let Z=new Date,dt=z(Z.getHours())+":"+z(Z.getMinutes())+":"+z(Z.getSeconds())+" "+z(Z.getDate())+"."+z(Z.getMonth()+1)+"."+Z.getFullYear(),nt=Object.assign([],o);nt.push({text:q.target.value,time:dt,id:Sv()}),s(nt),A("")}}function N(q,Z){A(q.text),r({edit:!0,id:q.id})}function $(q){A(q.target.value)}const at=(q,Z)=>{Z.stopPropagation(),s(o.filter(dt=>dt.id!==q)),r({edit:!1,id:void 0})};return Vt.jsx(Vt.Fragment,{children:Vt.jsxs(pv,{children:[Vt.jsx(mv,{searchTerm:U,onSearch:B}),Vt.jsx(fv,{filteredNotes:D,clickhandler:N,deleteItem:at,editingId:i.id}),Vt.jsx(rv,{handleBlur:G,text:v,handleChange:$})]})})}tm.createRoot(document.getElementById("root")).render(Vt.jsx(Xe.StrictMode,{children:Vt.jsx(bv,{})}));
